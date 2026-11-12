@@ -1,0 +1,76 @@
+/* Trucs inicials */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62,5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Repte: Pantalla gran (màxim 1100px i centrat) */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Estils per a mòbil (1 foto per fila) */
+.galeria figure {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin: 0 0 16px 0; /* Treu marges de fàbrica i deixa 16px per sota */
+}
+
+.galeria img {
+    width: 100%;
+    display: block; /* Resol l'exercici G1: elimina la ratlla buida de sota la foto */
+}
+
+.galeria figcaption {
+    padding: 10px;
+}
+
+/* Amagar el bàner i els quilòmetres al mòbil */
+.banner {
+    display: none;
+}
+
+.km {
+    display: none;
+}
+
+
+/* --- MEDIA QUERIES --- */
+
+/* A partir de 576px: Dues fotos per fila */
+@media (min-width: 576px) {
+    .galeria figure {
+        display: inline-block;
+        width: 48%;
+        vertical-align: top;
+        margin-right: 2%; /* Espaiat entre columnes */
+    }
+}
+
+/* A partir de 768px: Surten els quilòmetres i el bàner */
+@media (min-width: 768px) {
+    .banner {
+        display: block;
+    }
+    .km {
+        display: inline;
+    }
+}
+
+/* A partir de 992px: Tres fotos per fila */
+@media (min-width: 992px) {
+    .galeria figure {
+        width: 31.33%; /* 33.33% no serveix perquè sumat als marges superaria el 100% */
+    }
+}
