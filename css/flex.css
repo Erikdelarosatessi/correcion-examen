@@ -1,0 +1,162 @@
+/* Els dos trucs */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    font-size: 1.6rem;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f2f2;
+    color: #111;
+}
+
+/* Capçalera */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 12px 16px;
+    background-color: #111;
+}
+
+header p {
+    margin: 0;
+}
+
+.logo {
+    font-size: 2.6rem;
+    font-weight: bold;
+}
+
+.oferta {
+    color: #ffd400;
+    font-weight: bold;
+}
+
+/* Barra de navegació */
+nav {
+    background-color: #222;
+    padding: 10px 16px;
+    border-top: 1px solid #333;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #ffd400;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Contingut principal */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px 24px;
+}
+
+h1 {
+    font-size: 2.4rem;
+    margin: 20px 0;
+}
+
+/* Llista de productes (Flexbox) */
+.productes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.producte {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    padding: 12px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.producte img {
+    display: block;
+    width: 100%;
+}
+
+.producte h2 {
+    margin: 10px 0 6px;
+    font-size: 1.8rem;
+}
+
+.preus {
+    display: flex;
+    gap: 8px;
+    align-items: baseline;
+    margin: 0 0 12px;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.preus del {
+    color: #777;
+}
+
+.preus strong {
+    font-size: 2.2rem;
+}
+
+.descompte {
+    padding: 2px 6px;
+    border-radius: 4px;
+    background-color: #d62828;
+    color: white;
+    margin-left: auto;
+}
+
+.boto {
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #111;
+    color: #ffd400;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* --- MEDIA QUERIES (Flexbox) --- */
+
+@media (min-width: 576px) {
+    .producte {
+        width: calc((100% - 20px) / 2);
+    }
+}
+
+@media (min-width: 768px) {
+    .producte {
+        width: calc((100% - 40px) / 3);
+    }
+}
+
+@media (min-width: 992px) {
+    .producte {
+        width: calc((100% - 60px) / 4);
+    }
+}
